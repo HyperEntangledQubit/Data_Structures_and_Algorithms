@@ -25,7 +25,7 @@ class DynamicArray(object):
     def __init__(self, element = 0, capacity = 1):
         """ Initialize DynamicArray object.
         """
-        if not isinstance(element, [int, float, str, complex, bool]):
+        if not isinstance(element, (int, float, str, complex, bool)):
             raise TypeError(f"Can't instantiate DynamicArray object with {type(element)} type!")
         self.elements = element  # Number of Elements in array.
         self.capacity = int(capacity)  # Amount of Elements array can hold.
