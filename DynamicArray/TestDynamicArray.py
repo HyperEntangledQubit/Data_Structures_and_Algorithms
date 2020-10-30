@@ -9,6 +9,7 @@ import pytest
 
 from DynamicArray import DynamicArray
 
+
 class TestDynamicArray():
 
     @classmethod
@@ -40,9 +41,9 @@ class TestDynamicArray():
     def test_capacity_doubles_when_elements_equal_capacity(self):
         # First we need to verify how many items are in DynamicArray
         assert len(self.dynamicArray) == 1
-        assert self.dynamicArray.capacity == 1  # O(1)
+        assert self.dynamicArray.capacity == 1
         # Inserting another element to DynamicArray should cause the capacity to double.
-        self.dynamicArray.insert(2)
+        self.dynamicArray.insert(2)  # O(1)
         assert self.dynamicArray.capacity == 2  # Capacity is doubled here. O(N)
         self.dynamicArray.insert(3)
         assert self.dynamicArray.capacity == 4  # Capacity is doubled here. O(N)
