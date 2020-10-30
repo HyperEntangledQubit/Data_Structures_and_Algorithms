@@ -13,7 +13,8 @@ class DynamicArray(object):
     All arrays are dynamic in python (all of the memory management is handled
     for us in python). This class is meant to explore the concepts of dynamic arrays.
 
-    *Not to be used in production*.
+    *Please don't use this in production. This meant to be an example to better understand
+    the dynamic array data structure. Python handles all of this for us.*.
 
     - **parameters**, **types**, **return** and **return types**::
         :param elements: Number of elements in DynamicArray object.
@@ -24,6 +25,15 @@ class DynamicArray(object):
 
     def __init__(self, element = 0, capacity = 1):
         """ Initialize DynamicArray object.
+
+        - **parameters**, **types**::
+            :param element: Value of index to retrieve the element from within DynamicArray
+            :param type: int, float, str, complex, bool
+            :param capacity: Value that determines how many elements DynamicArray can hold.
+            :param type: int
+
+        - note::
+            Types of all elements in DynamicArray must be the same.
         """
         if not isinstance(element, (int, float, str, complex, bool)):
             raise TypeError(f"Can't instantiate DynamicArray object with {type(element)} type!")
@@ -48,7 +58,7 @@ class DynamicArray(object):
 
         - **parameters**, **types**, **return** and **return types**::
             :param index: Value of index to retrieve the element from within DynamicArray
-            :param type: Int
+            :param type:int
             :return self.array[index]: Element of in DynamicArray at the user defined index.
             :rtype: int, float, string, complex, bool
         """
@@ -87,7 +97,7 @@ class DynamicArray(object):
 
         - **parameters**, **types**, **return** and **return types**::
             :param new_capacity: Value of size to make new DynamicArray object.
-            :param type: Int
+            :param type: int
         """
         array = self.make_array(new_capacity)  # Allocate memory to use new capacity.
         for element in range(self.elements):
