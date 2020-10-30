@@ -9,6 +9,7 @@ import pytest
 
 from DynamicArray import DynamicArray
 
+
 class TestDynamicArray():
 
     @classmethod

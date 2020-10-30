@@ -119,3 +119,4 @@ class DynamicArray(object):
         if not isinstance(new_capacity, int):
             raise TypeError(f"Parameter {new_capacity} was NOT an integer. DynamicArray size must use int value.")
         return (new_capacity * py_object)()  # py_object is a type multiply by capacity and instantiate it.
+
