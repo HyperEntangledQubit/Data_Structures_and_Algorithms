@@ -10,6 +10,9 @@ from string import ascii_lowercase
 class Anagram():
 
     """ Object used to check if a given string is an Anagram.
+
+        TODO - Optimize this class. We don't need two ascii character arrays.
+        TODO - Perform Big-O analysis
     """
 
 
@@ -33,6 +36,10 @@ class Anagram():
                 1. If both strings have the same frequency of letters -- True
                 2. If both strings are equal to each other once sorted -- True
         """
+        # Base case number of letters in each string must be the same.
+        if len(string1) != len(string2):
+            return False  # Strings passed in are NOT anagrams.
+
         if method == "sorted":
             return self._isAnagramSorted(string1, string2)
         else:
@@ -87,5 +94,7 @@ class Anagram():
     @staticmethod
     def generateAnagram(string):
         """ Pass in a string and generate anagrams.
+
+        TODO - Fill this method out as a part of Issue number 13
         """
         pass
